@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(97, 97, 97)
+}
+/* .lista{
+    border: 2px solid black;
+}
+.ingrediente{
+    color: rgb(201, 199, 199);
+    margin: 10px 0;
+    list-style-type: square;
+}
+.ingrediente-importante{
+    color: blue;
+    margin: 10px 0;
+    list-style-type: square;
+}
+.ingrediente-danino{
+    color: rgb(236, 236, 137);
+    margin: 10px 0;
+    list-style-type: square;
+} */
+ .lista{
+    border: 2px solid black;
+    box-shadow: 0 0 20px black;
+}
+.lista__item{
+    color: rgb(201, 199, 199);
+    margin: 10px 0;
+    list-style-type: square;
+}
+.item--danino{
+    color: red;
+}
+.item--importante{
+    color: blue;
+}
+.lista--vieja{
+    opacity: 0.3;
+}

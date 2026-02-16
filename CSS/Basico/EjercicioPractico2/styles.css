@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    margin-top: 20px;
+    font-family: sans-serif;
+    background-color: white;
+}
+.card{
+    width: 400px;
+    color: white;
+    background-color: rgb(207, 96, 88);
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 35px black;
+    padding-bottom: 0px;
+}
+.color2{
+    background-color: rgb(201, 158, 80);
+}
+.color3{
+    background-color: rgb(71, 71, 71);
+}
+.card_title, .card_subtitle{
+    text-align: center;
+}
+.card_content{
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card_img{
+    width: 200px;
+    border-radius: 100%;
+    margin: auto;
+
+}

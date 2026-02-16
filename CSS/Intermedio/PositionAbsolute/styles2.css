@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    background-color: rgb(150, 150, 150);
+}
+.contenedor{
+    border: 3px solid black;
+    margin: 30px 100px;
+    background-color: rgb(190, 190, 190);
+    position: relative;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: white;
+    z-index: 10;
+}
+.box--blue{
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.box--red{
+    background-color: red;
+}

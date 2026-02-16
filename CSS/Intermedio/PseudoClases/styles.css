@@ -1,0 +1,60 @@
+h1{
+    color: aquamarine;
+    font-family: sans-serif;
+    margin: 30px;
+}
+
+/* Cuando pasamos el mouse por encima */
+h1:hover{
+    color: black;
+}
+/* Mientras se esté clickeando */
+h1:active{
+    color: rgb(177, 90, 90);
+    background: gray;
+}
+/* Seleccionando primer li */
+li:first-child{
+    color: blue;
+}
+/* seleeccionando segundo li */
+li:nth-child(2){
+    color: brown;
+}
+/* seleeccionando uno si uno no */
+li:nth-child(2n){
+    color: rgb(3, 117, 117);
+}
+/* seleeccionando ultimo li */
+li:last-child{
+    color: rosybrown;
+}
+/* SELECCIONANDO LOS LI DENTRO DE .LISTA PERO
+QUE NO0 TENGAN LA CLASE EXCLUIR */
+.lista li:not(.excluir){
+    color: red;
+}
+div{
+    background-color: green;
+    padding: 30px;
+    border: 3px solid black ;
+}
+/* Si está vacío se le quita el borde, si tiene
+cualquier cosa adentro entonces si tiene margen */
+div:empty{
+    border: none;
+}
+/* Seleccionando enlaces no visitados */
+a:link{
+    color: red;
+}
+/* Seleccionando enlaces visitados */
+a:visited{
+    color: green;
+}
+input:invalid{
+    color: red;
+}
+input:valid{
+    color: blue;
+}

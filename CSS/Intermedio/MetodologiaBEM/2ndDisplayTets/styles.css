@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+div{
+    padding: 1px;
+    background-color: gray;
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 3px 20px;
+    border-radius: 4px;
+}
+a:hover{
+    background-color: white;
+    color: gray;
+}
+ul{
+    text-align: center;
+}
+.register{
+    background-color: rgb(153, 153, 153);
+    color: white;
+    box-shadow: 0 0 6px black;
+    margin: 20px;
+}
+.login{
+    padding: 3px 30px;
+    background-color: rgb(153,153,153);
+    box-shadow: 0 0 6px black;
+}

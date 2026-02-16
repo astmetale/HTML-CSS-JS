@@ -1,0 +1,26 @@
+body{
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: gray;
+}
+.contenedor{
+    border: 2px solid black;
+    margin: 20px 50px;
+    background-color: white;
+    position: relative;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(83, 83, 83);
+    color: white;
+}
+.--blue{
+    background-color: rgb(42, 42, 129);
+    position: absolute;
+    top: 00px;
+    left: 0px;
+}
+.--red{
+    background-color: rgb(85, 23, 23);
+}
