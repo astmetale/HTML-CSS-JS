@@ -93,4 +93,4 @@ if (edad >= 18){
     document.writeln("Eres menor de edad pero mayor a 2 años")
 }
 
-// Hola
+// Hola como estas
