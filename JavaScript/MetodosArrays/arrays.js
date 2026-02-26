@@ -53,4 +53,12 @@ document.writeln(`${nombres7} Aparentemente estan iguales pero su posicion[0] es
 let nombres8=  ["pedro", "maria", "jorge"];
 resultado=nombres8.slice(1,2);
 document.writeln(nombres8+`<b> El array original sigue igual y es este</b><br>`);
-document.writeln(`${resultado} <b>es el array copia, solamente va a mantener los elementos de la posicion que hayamos dicho</b>`)
+document.writeln(`${resultado} <b>es el array copia, solamente va a mantener los elementos de la posicion que hayamos dicho</b><br><br>`);
+
+
+//filter itera un array y la variable que queramos en cada iteracion le va a dar el valor de una posicion del array
+let numeros2 = ["abecedario","manzana","pedro","dedo","bobo","pedro"];
+document.writeln(`<b>El metodo filter hace que en cada iteracion guarde en una variable en orden cada valor del array</b><br>`)
+numeros2.filter(function num(numero){
+    document.writeln(numero+`<br>`);
+});
