@@ -1,9 +1,10 @@
 const cantMaterias = 2;
+let cant = 0;
 const profesores = 2;
 let materias = [];
 let op;
 while(op!=5){
-    op = parseInt(prompt(`MENU DE OPCIONES\n1.- Registrar materias y profesores\n2.- Consultar materias y profesores\n3.-Ingresar alumnos\n4.- Saber en cuantas clases esta Cofla\n5.- Salir`));
+    op = parseInt(prompt(`MENU DE OPCIONES\n1.- Registrar materias y profesores\n2.- Ingresar alumnos\n3.- Saber en cuantas clases esta Cofla\n4.- Consultar alumnos y profesores con su materia\n5.- Salir`));
     switch(op){
         case 1:
             if(materias.length!=2){
@@ -18,18 +19,6 @@ while(op!=5){
                 
             break;
         case 2:
-            let cadena = "";
-                if(materias.length===2){
-                    for(i=0;i<cantMaterias;i++){
-                        let name = materias[i];
-                        cadena+=(`El nombre de la materia es ${name.nombre} y su profesor es ${name.profesor}\n`);
-                    }
-                    alert(`${cadena}`);
-                }else{
-                    alert("Primero debe usar la opcion 1");
-                }
-            break;
-        case 3:
             if(materias.length===2){
             let b = `Ingrese el nombre de su materia para ingresar los alumnos.\nLas materias registradas son:\n`;
             for(i=0;i<cantMaterias;i++){
@@ -44,13 +33,14 @@ while(op!=5){
                         alumnos.push(prompt(`Ingrese el nombre de su estudiante numero ${(j+1)}`));
                     }
                     materias[i].alumnos = alumnos;
+                    cant++;
                 }
             }
             }else{
                     alert("Primero debe usar la opcion 1");
                 }
             break;
-        case 4:
+        case 3:
             if(materias.length===2){
                 let resultado = "";
                 for(i=0;i<cantMaterias;i++){
@@ -58,7 +48,7 @@ while(op!=5){
                     if(Array.isArray(alum)){
                         for(let nombre of alum){
                             if(nombre && nombre.toLowerCase().includes("cofla")){
-                                resultado += `Cofla aparece en la materia ${materias[i].nombre}\n`;
+                                resultado += `Cofla aparece en la materia ${materias[i].nombre} con el profesor ${materias[i].profesor}\n`;
                                 break; // no hace falta seguir revisando esta materia
                             }
                         }
@@ -70,6 +60,22 @@ while(op!=5){
                     alert(resultado);
                 }
             }else{
+                    alert("Primero debe usar la opcion 1");
+                }
+            break;
+        case 4:
+            let cadena = "";
+                if(materias.length===2){
+                    for(i=0;i<cant;i++){
+                        let name = materias[i];
+                        cadena+=(`El nombre de la materia es ${name.nombre} y su profesor es ${name.profesor}\n`);
+                        for(j=0;j<2;j++){
+                            cadena+=`${name.alumnos[i]}\n`;
+                        }
+
+                    }
+                    alert(cadena);
+                }else{
                     alert("Primero debe usar la opcion 1");
                 }
             break;
