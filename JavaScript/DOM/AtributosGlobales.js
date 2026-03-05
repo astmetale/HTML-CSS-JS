@@ -7,3 +7,9 @@ t.setAttribute("dir","rtl");
 // Mientras este definida no importa si es false o true va a ocultarse
 t = document.querySelector(".oculto ");
 t.setAttribute("hidden","true");
+
+t = document.querySelector(".tab");
+t.setAttribute("tabindex","0");
+
+t = document.querySelector(".titulo");
+t.setAttribute("title","jajaja");
