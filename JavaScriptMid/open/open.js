@@ -18,5 +18,7 @@
 // alert(scroly);
 let ventana = window.open("https://youtube.com");
 ventana.resizeBy(100,200);
+
+
 ventana.resizeTo(100,200);
 
