@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* .contenedor-1{
+    padding: 30px;
+    background-color: red;
+} */
+
+.input-prueba{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 6px;
+}
