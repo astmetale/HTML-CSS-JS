@@ -1,6 +1,5 @@
-const img = document.querySelector(".img-prueba");
+const input = document.querySelector(".input-prueba");
 
-img.addEventListener("error", ()=>{
-    console.log("Ha sucedido um error");    
+input.addEventListener("select", (e)=>{
+    console.log(e);
 });
-
