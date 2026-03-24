@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(56, 56, 56);
+    font-family: sans-serif;
+    color: white;
+    margin: 0;
+}
+.contenedor{
+    margin: 0px;
+    padding: 100px;
+    background-color: red;
+}

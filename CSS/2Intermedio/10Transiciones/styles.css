@@ -1,0 +1,22 @@
+body{
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: rgb(68, 68, 68);
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    margin: auto;
+    margin-top: 150px;
+    font-size: 40px;
+    text-align: center;
+    transition-property: color, background-color;
+    transition-duration: 1s;
+    font-weight: bold;
+    transition-delay: 1s;
+}
+.box:hover{
+    color: white;
+    background-color: blue;
+}

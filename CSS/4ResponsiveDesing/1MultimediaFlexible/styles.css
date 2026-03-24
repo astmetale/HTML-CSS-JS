@@ -1,0 +1,21 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    color: white;
+    background-color: gray;
+}
+
+div, body{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+.contenedor{
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
+video{
+    width: 100%;
+}

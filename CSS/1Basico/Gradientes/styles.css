@@ -1,0 +1,24 @@
+body{
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: rgb(71, 70, 70);
+}
+.box{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(rgb(133, 129, 78), transparent);
+    border-radius: 5px;
+}
+h1{
+    padding-top: 10px;
+    text-align: center;
+    border-top: 5px solid black;
+}
+.box2{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient( white,black);
+    border-radius: 5px;
+}
