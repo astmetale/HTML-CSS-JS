@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(27, 25, 25);
+    color: white;
+}
+.formularioDeNotas{
+    margin: 50px 10%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: rgb(86, 86, 86);
+    border-radius: 20px;
+}
+
+h2{
+    margin: 0;
+    flex-grow: 1;
+}
+
+input{
+    width: 30px;
+}
+
+input[type="button"]{
+    margin-left: 6px;
+    width: auto;
+}
