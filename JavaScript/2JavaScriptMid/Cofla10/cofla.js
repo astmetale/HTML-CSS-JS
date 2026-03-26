@@ -1,66 +1,77 @@
-
+document.addEventListener("DOMContentLoaded", () => {
     const sendButton = document.getElementById("snd-nota");
-    sendButton.addEventListener("click", () => {
+    
+    sendButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("🔥 Click detectado");
+        
         let resultado, mensaje;
+        
         try {
-            let prevRes = parseInt(document.getElementById("nota").value);
-            if (isNaN(prevRes)) {
-                throw "Gracioso";
+            let notaInput = document.getElementById("nota").value.trim();
+            
+            if (!notaInput) {
+                throw new Error("Campo vacío");
             }
-            mensaje = definirMensaje(prevRes);
-            resultado = verificarAprobacion(8,5,prevRes);
-
+            
+            let prevRes = parseInt(notaInput);
+            
+            if (Number.isNaN(prevRes) || prevRes < 0 || prevRes > 10) {
+                throw new Error("Nota debe ser 0-10");
+            }
+            
+            // Calcular resultado y mensaje
+            let verificacion = verificarAprobacion(8, 5, prevRes);
+            resultado = verificacion[0];  // HTML (Aprobado/Reprobado)
+            mensaje = definirMensaje(prevRes);  // Mensaje descriptivo
+            
         } catch (e) {
-            resultado = "Error";
-            mensaje = "He descubierto que intentaste hackear el sitio";
+            console.log("Error:", e.message);
+            resultado = "<p class='red'>ERROR</p>";
+            mensaje = e.message || "Error desconocido";
         }
+        
         abrirModal(resultado, mensaje);
     });
-const abrirModal = (res, msg) => {
-    console.log(res);
-    console.log(msg);
-}
-function definirMensaje(pr){
-    let resultado;
-    switch(pr){
-        case 1: 
-            resultado = "Te pasas de lanza";
-        break;
-        case 2: 
-            resultado = "Eres malisimo en la materia";
-        break;
-        case 3: 
-            resultado = "No sabes casi nada";
-        break;
-        case 4: 
-            resultado = "Muy mal";
-        break;
-        case 5: 
-            resultado = "Mal";
-        break;
-        case 6: 
-            resultado = "Regular";
-        break;
-        case 7: 
-            resultado = "Bien pero puede mejorar";
-        break;
-        case 8: 
-            resultado = "Muy Bien";
-        break;
-        case 9: 
-            resultado = "Excelente";
-        break;
-        case 10: 
-            resultado = "Insuperable";
-        break;
-        default: resultado = null;
+});
+
+function definirMensaje(nota) {
+    console.log("Definir mensaje para:", nota);
+    switch (nota) {
+        case 1: return "Te pasas de lanza";
+        case 2: return "Eres malísimo en la materia";
+        case 3: return "No sabes casi nada";
+        case 4: return "Muy mal";
+        case 5: return "Mal";
+        case 6: return "Regular";
+        case 7: return "Bien pero puede mejorar";
+        case 8: return "Muy Bien";
+        case 9: return "Excelente";
+        case 10: return "Insuperable";
+        default: return "Nota no válida";
     }
-    return resultado;
 }
 
-function verificarAprobacion(nota1,nota2,prevRes){
-    promedio = (nota1 + nota2 + prevRes);
-    if(promedio>=7){
-        let resultado = "<p class=`green`>APROBADO</p>"
+function verificarAprobacion(nota1, nota2, notaNueva) {
+    console.log("Verificar:", {nota1, nota2, notaNueva});
+    let promedio = ((nota1 + nota2 + notaNueva) / 3);
+    
+    if (promedio >= 7) {
+        return ["<p class='green'>APROBADO</p>", Math.round(promedio * 10) / 10];
     }
+    return ["<p class='red'>DESAPROBADO</p>", Math.round(promedio * 10) / 10];
+}
+
+function abrirModal(res, msg) {
+    console.log("Abrir modal:", res, msg);
+    document.querySelector(".resultado").innerHTML = res;
+    document.querySelector(".mensaje").innerHTML = "Tu nota: " + msg;
+    
+    let modal = document.querySelector(".modal-background");
+    modal.style.display = "flex";
+    modal.style.animation = "aparecer 0.5s forwards";
+}
+
+function cerrarModal() {
+    document.querySelector(".modal-background").style.display = "none";
 }

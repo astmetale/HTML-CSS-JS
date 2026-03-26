@@ -27,3 +27,40 @@ input[type="button"]{
     margin-left: 6px;
     width: auto;
 }
+.modal-background{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+}
+.modal{
+    background-color: #fdfdfd;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+.resultado{
+    font-size: 23px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        display: flex;
+    }
+    100%{
+        opacity: 1;
+        display: flex;
+    }
+}
