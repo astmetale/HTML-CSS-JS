@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+.contenedor{
+    box-sizing: border-box;
+    display: flex; 
+    justify-content: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.calificacion{
+    background-color: rgb(95, 95, 95);
+    border: none;
+    border-radius: 4px;
+    height: 20px;
+    color: white;
+}
+.subirCalificaciones{
+    background-color: rgb(95, 95, 95);
+    border: 0;
+    border-radius: 5px;
+    height: 25px;
+    color: white;
+}

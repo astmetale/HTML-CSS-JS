@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sendButton = document.getElementById("snd-nota");
-    
     sendButton.addEventListener("click", (e) => {
         e.preventDefault();
         console.log("🔥 Click detectado");
