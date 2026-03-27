@@ -27,3 +27,23 @@ h1{
     height: 25px;
     color: white;
 }
+#contenedor2 {
+    display: flex;
+    flex-direction: column;  /* Vertical */
+    align-items: center;     /* Centrar horizontal */
+    justify-content: center; /* Centrar vertical */
+    gap: 10px;               /* Espacio entre párrafos */
+    text-align: center;
+    margin: 20px;
+}
+
+#parrafo {
+    font-weight: bolder;
+    font-size: 30px;
+    margin: 0;  /* Quita márgenes por defecto */
+}
+
+#opciones {
+    margin: 0;
+    font-size: 18px;
+}
