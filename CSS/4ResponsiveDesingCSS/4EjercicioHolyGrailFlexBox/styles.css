@@ -3,6 +3,9 @@ body{
     font-family: sans-serif;
     color: white;
     background-color: rgb(57, 57, 57);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 body, div{
@@ -51,13 +54,16 @@ aside, main{
 
 .secondary-navbar{
     min-width: 200px;
+    text-align: center;
 }
 .secondary-navbar a{
     color: #48e;
     display: inline-block;
     padding: 6px 10px;
 }
-
+.secondary-navbar UL{
+    padding: 0;
+}
 .secondary-navbar li{
     list-style: none;
 }
